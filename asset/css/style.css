@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    color: #5e5e5e;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.root {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-grow: 1;
+}
+
+.player1, .player3 {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playground {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    box-shadow: 6px 6px 9px 0 #ececec;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.cell {
+    border: 1px solid white;
+    padding: 14px;
+    box-shadow: 6px 4px 12px -3px #cacaca inset;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.cell img {
+    width: 100%;
+    height: 100%;
+}
+
+.player2 {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+}
+
+.player3 {
+    opacity: 0.1;
+}
+
+.player-wrapper {
+
+}
+
+.player-wrapper img {
+    width: 100px;
+    height: 100px;
+}
+
+.player-wrapper span {
+    font-size: 33px;
+    font-weight: 800;
+}
+
+.tools {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #aaa;
+}
+
+.animation {
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+}
